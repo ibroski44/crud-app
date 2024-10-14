@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
-export const UserForm = ({ initialData = {} }) => {
+export const UserForm = ({ initialData = {}, onUserAdded }) => {
   const [name, setName] = useState(initialData.name || "");
   const [email, setEmail] = useState(initialData.email || "");
   const queryClient = useQueryClient();
-  const navigate = useNavigate();
 
   const addUserMutation = useMutation(
     (newUser) => axios.post("http://localhost:4000/users", newUser),
     {
       onSuccess: () => {
         queryClient.invalidateQueries("users");
-        navigate("/path");
+        onUserAdded();
       },
     }
   );

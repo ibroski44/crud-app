@@ -7,6 +7,7 @@ import { UsersList } from "./components/UsersList";
 import { UserDetails } from "./components/UserDetails";
 import { UserForm } from "./components/UserForm";
 import { EditUsers } from "./components/EditUsers";
+import { Dashboard } from "./components/Dashboard";
 
 const queryClient = new QueryClient();
 export default function App() {
@@ -22,8 +23,9 @@ export default function App() {
               <li>
                 <Link to="/users">UsersList</Link>
               </li>
+
               <li>
-                <Link to="/add-user">Add user</Link>
+                <Link to="/Dashboard">Student</Link>
               </li>
             </ul>
           </nav>
@@ -33,6 +35,7 @@ export default function App() {
             <Route path="/users/:userId" element={<UserDetails />} />
             <Route path="/add-user" element={<UserForm />} />
             <Route path="/edit-user/:id" element={<EditUsers />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </div>
       </Router>
