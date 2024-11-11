@@ -23,9 +23,20 @@ export const UserDetails = () => {
     <h2>divine reload: error.message </h2>
   </div>;
   return (
-    <div>
-      <h1>{data?.data.name}</h1>
-      <p>Email:{data?.data.email}</p>
+    <div className="userDetailsContainer">
+      <h1 className="userName">{data?.data.name}</h1>
+      <p className="userDetail">
+        <span>Email Address:</span> {data?.data.email}
+      </p>
+      <p className="userDetail">
+        <span>Phone Number:</span> {data?.data.number}
+      </p>
+      <p className="userDetail">
+        <span>Enroll Number:</span> {data?.data.E_number}
+      </p>
+      <p className="userDetail">
+        <span>Date:</span> {data?.data.date}
+      </p>
     </div>
   );
 };

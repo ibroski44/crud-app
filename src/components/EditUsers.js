@@ -37,21 +37,55 @@ export const EditUsers = () => {
       });
   };
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (isLoading) return <p className="loading">Loading...</p>;
+  if (error) return <p className="error">Error: {error}</p>;
   return (
-    <div>
+    <div className="edit-user-container">
       <h2>Edit User</h2>
-      <form onSubmit={handleUpdate}>
-        <label>
-          Name:
+      <form onSubmit={handleUpdate} className="edit-user-form">
+        <div className="form-group">
+          <label>Name:</label>
           <input
             type="text"
             value={user.name}
             onChange={(e) => setUser({ ...user, name: e.target.value })}
           />
-        </label>
-        <button type="submit">Update</button>
+        </div>
+        <div className="form-group">
+          <label>Email Address:</label>
+          <input
+            type="email"
+            value={user.email}
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
+          />
+        </div>
+        <div className="form-group">
+          <label>Phone Number:</label>
+          <input
+            type="number"
+            value={user.number}
+            onChange={(e) => setUser({ ...user, number: e.target.value })}
+          />
+        </div>
+        <div className="form-group">
+          <label>Enroll Number:</label>
+          <input
+            type="number"
+            value={user.E_number}
+            onChange={(e) => setUser({ ...user, E_number: e.target.value })}
+          />
+        </div>
+        <div className="form-group">
+          <label>Date:</label>
+          <input
+            type="date"
+            value={user.date}
+            onChange={(e) => setUser({ ...user, date: e.target.value })}
+          />
+        </div>
+        <button type="submit" className="submit-button">
+          Update
+        </button>
       </form>
     </div>
   );

@@ -15,9 +15,10 @@ code {
 .dashboard-container {
   display: flex;
   height: auto;
+  width: 95%;
 }
 .Dashboard-ib {
-  width: 250px;
+  width: 220px;
   height: 95vh;
   background-color: #2c3e50;
   display: flex;
@@ -28,15 +29,21 @@ code {
   left: 0;
   top: 0;
 }
-
+.Admin {
+  display: block;
+  color: rgb(174, 103, 10);
+}
+.user-nam {
+  font-size: 23px;
+}
 .profile-section {
   text-align: center;
 }
 
 .profile-image {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .user-name {
@@ -98,10 +105,10 @@ code {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 400px;
+
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  position: absolute;
+  left: end;
 }
 
 .add-user-button:hover {
@@ -120,7 +127,6 @@ code {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
-  margin-left: 300px;
 }
 .userlist-title {
   font-size: 24px;
@@ -166,7 +172,7 @@ code {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  width: 400px;
+  width: 600px;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -183,4 +189,323 @@ code {
 
 .close-button:hover {
   color: red;
+}
+/* for UsersList*/
+.heading-1 {
+  margin-left: 30px;
+}
+.container {
+  padding: 20px;
+  width: 90%;
+  margin-right: 200px;
+
+  font-family: "Times New Roman", Times, serif;
+}
+
+.heading {
+  color: #333;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.userInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: center;
+}
+.link {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.detail,
+.details {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+  padding-right: 55px;
+}
+.details {
+  color: #34495e;
+  font-size: 15px;
+  font-weight: bolder;
+  padding-left: 18px;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+}
+.button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.deleteButton {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+.error {
+  text-align: center;
+  color: #f44336;
+}
+/* UserForm css*/
+
+.btn12 {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.buttonHover {
+  background-color: #45a049;
+}
+/* EditUsers.css */
+
+.edit-user-container,
+.Ib-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.edit-user-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.edit-user-form,
+.user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group,
+.form-label {
+  margin-bottom: 15px;
+}
+
+.form-group label,
+.form-label label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-label input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: #666;
+}
+/* UserDetails.css */
+
+.userDetailsContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.userName {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.userDetail {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.userDetail span {
+  font-weight: bold;
+  color: #333;
+}
+/*Home*/
+
+.body-part2 {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 450px;
+  gap: 20px; /* Space between each body-part1 section */
+  width: 1000px;
+  padding: 20px;
+
+  border-radius: 8px;
+}
+
+.body-part1,
+.body-part3,
+.body-part4,
+.body-part5 {
+  background-color: #13f4da;
+  border-radius: 8px;
+  padding: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+.body-part3 {
+  background-color: antiquewhite;
+}
+.body-part4 {
+  background-color: bisque;
+}
+.body-part5 {
+  background-color: chocolate;
+}
+.nigeria {
+  font-size: 10px;
+}
+.body-part1:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.image1 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding-top: 12px;
+  padding-left: 15px;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: bolder;
+  color: blueviolet;
+  margin: 0;
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+.user-name1,
+.user-name13 {
+  font-size: 15px;
+  font-weight: bolder;
+  color: #333;
+  margin: 0;
+  position: relative;
+  left: 86%;
+}
+.user-name13 {
+  position: relative;
+  left: 62%;
+}
+/* Search bar */
+.wq {
+  display: flex;
+  align-items: start;
+  position: relative;
+  left: 500px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 16px;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-input:focus {
+  border-color: #333;
+}
+
+.notification-bell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35px;
+}
+
+.bell-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.bell-icon:hover {
+  transform: scale(1.1);
 }

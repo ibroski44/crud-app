@@ -15,7 +15,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
         <div className="App">
-          <nav>
+          {/* <nav>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -29,6 +29,7 @@ export default function App() {
               </li>
             </ul>
           </nav>
+  */}
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/users" element={<UsersList />} />
