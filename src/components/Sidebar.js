@@ -9,23 +9,56 @@ export const Sidebar = () => {
           <h1 className="user-nam">CRUD-OPERATIONS</h1>
           <img src="/W.png" alt="User Profile" className="profile-image" />
 
-          <h1 className="user-name">
+          <h1 className="user-nas">
             IBROSKI44<span className="Admin">Admin</span>
           </h1>
         </div>
         <ul className="nav-links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <span>
+                <img src="/h.png" alt="cap" className="emojis1" />
+              </span>{" "}
+              Home
+            </Link>
           </li>
-          <li>Courses</li>
           <li>
-            <Link to="/dashboard ">Student</Link>
+            <span>
+              {" "}
+              <img src="/b.png" alt="cap" className="image13" />
+            </span>{" "}
+            Courses
           </li>
-          <li>Payment</li>
-          <li>Settings</li>
+          <li>
+            <Link to="/dashboard ">
+              <span>
+                <img src="/ca.png" alt="cap" className="emojis12" />
+              </span>{" "}
+              Student
+            </Link>
+          </li>
+          <li>
+            {" "}
+            <span>
+              <img src="/pa.png" alt="cap" className="emojis1" />
+            </span>{" "}
+            Payment
+          </li>
+          <li>
+            <span>
+              <img src="/se.png" alt="cap" className="emojis1" />
+            </span>{" "}
+            Settings
+          </li>
         </ul>
         <div className="logout">
-          <button className="logout-button">Log Out</button>
+          <button className="logout-button">
+            Log Out{" "}
+            <span>
+              {" "}
+              <img src="/si.png" alt="cap" className="image11" />
+            </span>
+          </button>
         </div>
       </div>
     </div>

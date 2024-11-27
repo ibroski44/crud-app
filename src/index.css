@@ -17,27 +17,52 @@ code {
   height: auto;
   width: 95%;
 }
+
+.naw {
+  margin: 0;
+  padding-left: 20px;
+}
 .Dashboard-ib {
-  width: 220px;
-  height: 95vh;
-  background-color: #2c3e50;
+  width: 190px;
+  height: 100%;
+  background-color: rgba(242, 234, 225, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
+
   left: 0;
   top: 0;
 }
 .Admin {
   display: block;
-  color: rgb(174, 103, 10);
+  color: rgba(254, 175, 0, 1);
 }
 .user-nam {
-  font-size: 23px;
+  font-size: 19px;
 }
 .profile-section {
   text-align: center;
+}
+.emojis1 {
+  width: 20px;
+  padding-right: 10px;
+}
+.image13 {
+  width: 13px;
+  padding-right: 10px;
+}
+.emojis3 {
+  width: 20px;
+}
+.image11 {
+  width: 17px;
+  padding-left: 10px;
+}
+.emojis12 {
+  width: 22px;
+  padding-right: 10px;
 }
 
 .profile-image {
@@ -54,28 +79,32 @@ code {
 .nav-links {
   list-style-type: none;
   padding: 0;
+  text-align: center;
+  text-decoration: none;
 }
 
 .nav-links li {
-  color: #ecf0f1;
+  color: rgba(0, 0, 0, 1);
   padding: 15px 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .nav-links li:hover {
-  background-color: #34495e;
+  background-color: rgba(254, 175, 0, 1);
 }
 
 .logout {
-  margin-top: auto;
+  margin-bottom: 35px;
+  margin-top: 55px;
 }
 
 .logout-button {
   width: 100%;
   padding: 10px;
-  background-color: #e74c3c;
-  color: white;
+
+  color: fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -83,7 +112,7 @@ code {
 }
 
 .logout-button:hover {
-  background-color: #c0392b;
+  background-color: rgba(254, 175, 0, 1);
 }
 .body-part {
   width: 350px;
@@ -99,7 +128,7 @@ code {
 
 .add-user-button {
   padding: 10px 20px;
-  background-color: #28a745;
+  background-color: rgba(254, 175, 0, 1);
   color: white;
   border: none;
   border-radius: 4px;
@@ -388,11 +417,13 @@ code {
 
 .body-part2 {
   display: flex;
-  margin-top: 100px;
-  margin-left: 450px;
-  gap: 20px; /* Space between each body-part1 section */
-  width: 1000px;
+  margin-top: 10px;
+  margin-left: 250px;
+  gap: 60px; /* Space between each body-part1 section */
+  width: 1110px;
   padding: 20px;
+  height: 555px;
+  align-content: center;
 
   border-radius: 8px;
 }
@@ -401,7 +432,7 @@ code {
 .body-part3,
 .body-part4,
 .body-part5 {
-  background-color: #13f4da;
+  background-color: rgba(240, 249, 255, 1);
   border-radius: 8px;
   padding: 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -410,13 +441,13 @@ code {
   transition: transform 0.3s ease;
 }
 .body-part3 {
-  background-color: antiquewhite;
+  background-color: rgba(254, 246, 251, 1);
 }
 .body-part4 {
-  background-color: bisque;
+  background-color: rgba(254, 251, 236, 1);
 }
 .body-part5 {
-  background-color: chocolate;
+  background-color: rgba(254, 175, 0, 1);
 }
 .nigeria {
   font-size: 10px;
@@ -428,19 +459,37 @@ code {
 .image1 {
   width: 25px;
   height: 25px;
-  border-radius: 50%;
+
   padding-top: 12px;
   padding-left: 15px;
 }
 
 .user-name {
   font-size: 20px;
-  font-weight: bolder;
-  color: blueviolet;
+  font-weight: lighter;
+  color: rgb(13, 11, 15);
   margin: 0;
   padding-bottom: 20px;
   padding-left: 15px;
 }
+.user-nas {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(13, 11, 15);
+  margin: 0;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+.user-names {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 0;
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+
 .user-name1,
 .user-name13 {
   font-size: 15px;
@@ -459,21 +508,29 @@ code {
   display: flex;
   align-items: start;
   position: relative;
-  left: 500px;
+  left: 600px;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  margin: 0 auto;
-}
 
+  border-radius: 8px;
+
+  max-width: 300px;
+  margin: auto;
+}
+.cfr {
+  margin-bottom: 20px;
+  width: 1540px;
+  margin-left: 20px;
+}
 .search-bar {
   flex: 1;
-  margin-right: 10px;
-}
 
+  display: flex;
+}
+.emojis3 {
+  margin-left: -35px;
+  margin-top: 7px;
+}
 .search-input {
   width: 100%;
   padding: 8px 12px;
@@ -504,6 +561,7 @@ code {
   height: 30px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  margin-top: 3px;
 }
 
 .bell-icon:hover {
