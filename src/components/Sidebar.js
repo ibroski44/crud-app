@@ -14,7 +14,7 @@ export const Sidebar = () => {
           </h1>
         </div>
         <ul className="nav-links">
-          <li>
+          <li className="active-linkes">
             <Link to="/">
               <span>
                 <img src="/h.png" alt="cap" className="emojis1" />
@@ -29,7 +29,7 @@ export const Sidebar = () => {
             </span>{" "}
             Courses
           </li>
-          <li>
+          <li className="active-linkes">
             <Link to="/dashboard ">
               <span>
                 <img src="/ca.png" alt="cap" className="emojis12" />
@@ -40,13 +40,13 @@ export const Sidebar = () => {
           <li>
             {" "}
             <span>
-              <img src="/pa.png" alt="cap" className="emojis1" />
+              <img src="/pa.png" alt="cap" className="emojis4" />
             </span>{" "}
             Payment
           </li>
           <li>
             <span>
-              <img src="/se.png" alt="cap" className="emojis1" />
+              <img src="/se.png" alt="cap" className="emojis44" />
             </span>{" "}
             Settings
           </li>

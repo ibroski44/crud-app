@@ -17,6 +17,9 @@ code {
   height: auto;
   width: 95%;
 }
+.active-linkes {
+  background-color: rgba(254, 175, 0, 1);
+}
 
 .naw {
   margin: 0;
@@ -46,12 +49,23 @@ code {
   text-align: center;
 }
 .emojis1 {
+  width: 25px;
+  padding-right: 15px;
+}
+.emojis4 {
   width: 20px;
   padding-right: 10px;
+  padding-left: 10px;
+}
+.emojis44 {
+  width: 20px;
+  padding-right: 10px;
+  padding-left: 6px;
 }
 .image13 {
-  width: 13px;
+  width: 17px;
   padding-right: 10px;
+  padding-left: 6px;
 }
 .emojis3 {
   width: 20px;
@@ -61,14 +75,16 @@ code {
   padding-left: 10px;
 }
 .emojis12 {
-  width: 22px;
-  padding-right: 10px;
+  width: 27px;
+  padding-right: 11px;
+  padding-left: 4px;
 }
 
 .profile-image {
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  background-color: lightgray;
 }
 
 .user-name {
@@ -92,7 +108,7 @@ code {
 }
 
 .nav-links li:hover {
-  background-color: rgba(254, 175, 0, 1);
+  background-color: lightgray;
 }
 
 .logout {
@@ -148,11 +164,12 @@ code {
   flex: 1;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 50px;
   background-color: #f8f9fa;
 }
 .user-list-section {
-  padding: 20px;
+  padding-right: 50px;
+  padding-left: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
@@ -199,7 +216,8 @@ code {
 
 .modal-content {
   background-color: white;
-  padding: 20px;
+  padding: 30px;
+
   border-radius: 8px;
   width: 600px;
   position: relative;
@@ -374,6 +392,26 @@ code {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.error {
+  color: rgb(0, 145, 255);
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+.cancel-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #e3e30d;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+.cancel-button:hover {
+  background-color: #45a049;
+}
 
 .submit-button:hover {
   background-color: #45a049;
@@ -419,7 +457,7 @@ code {
   display: flex;
   margin-top: 10px;
   margin-left: 250px;
-  gap: 60px; /* Space between each body-part1 section */
+  gap: 40px; /* Space between each body-part1 section */
   width: 1110px;
   padding: 20px;
   height: 555px;

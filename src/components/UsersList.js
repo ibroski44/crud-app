@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "react-query";
 import axios from "axios";
+import { Modal } from "./Modal";
+import { EditUsers } from "./EditUsers";
+
 import { Link } from "react-router-dom";
 
 const fetchUsers = () => {
@@ -20,8 +23,20 @@ export const UsersList = () => {
     },
   });
 
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null);
+
   const handleDelete = (id) => {
     deleteUserMutation.mutate(id);
+  };
+  const handleEdit = (user) => {
+    setSelectedUser(user);
+    setShowEditModal(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setShowEditModal(false);
+    setSelectedUser(null);
   };
 
   if (isLoading) return;
@@ -58,9 +73,9 @@ export const UsersList = () => {
               <span className="detail">{user.date}</span>
             </div>
             <div className="actions">
-              <Link to={`/edit-user/${user.id}`}>
-                <button className="button">Edit</button>
-              </Link>
+              <button className="button" onClick={() => handleEdit(user)}>
+                Edit
+              </button>
               <button
                 className="deleteButton"
                 onClick={() => handleDelete(user.id)}
@@ -71,6 +86,12 @@ export const UsersList = () => {
           </li>
         ))}
       </ul>
+      {/* Edit User Modal */}
+      <Modal show={showEditModal} onClose={handleCloseEditModal}>
+        {selectedUser && (
+          <EditUsers user={selectedUser} onClose={handleCloseEditModal} />
+        )}
+      </Modal>
     </div>
   );
 };

@@ -24,12 +24,13 @@ export const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <Sidebar />
+
       <div className="main-content">
-        {showUserList && (
+        {
           <div className="user-list-section">
             <UsersList />
           </div>
-        )}
+        }
         <div className="add-user-section">
           <button className="add-user-button" onClick={handleAddUser}>
             Add User
