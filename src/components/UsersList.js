@@ -52,40 +52,55 @@ export const UsersList = () => {
   return (
     <div className="container">
       <h2 className="heading">Students List</h2>
-      <div className="heading-1">
-        <span className="details">NAMES</span>
-        <span className="details">EMAIL ADDRESS</span>
-        <span className="details">PHONE-NUMBER</span>
-        <span className="details">ENROLL-NUMBER</span>
-        <span className="details">DATE</span>
-      </div>
-      <ul className="list">
-        {data?.data.map((user) => (
-          <li key={user.id} className="listItem">
-            <div className="userInfo">
-              <Link to={`/users/${user.id}`} className="link">
-                {user.name}
-              </Link>
 
-              <span className="detail">{user.email}</span>
-              <span className="detail">{user.number}</span>
-              <span className="detail">{user.E_number}</span>
-              <span className="detail">{user.date}</span>
-            </div>
-            <div className="actions">
-              <button className="button" onClick={() => handleEdit(user)}>
-                Edit
-              </button>
-              <button
-                className="deleteButton"
-                onClick={() => handleDelete(user.id)}
-              >
-                Delete
-              </button>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <table className="user-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>NAMES</th>
+            <th>EMAIL ADDRESS</th>
+            <th>PHONE NUMBER</th>
+            <th>ENROLL NUMBER</th>
+            <th>DATE</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {data?.data.map((user) => (
+            <tr key={user.id}>
+              <td>
+                <span>
+                  <img src="/w.png" alt="cap" className="imag-load" />
+                </span>
+              </td>
+              <td>
+                <Link to={`/users/${user.id}`} className="link">
+                  {user.name}
+                </Link>
+              </td>
+              <td>{user.email}</td>
+              <td>{user.number}</td>
+              <td>{user.E_number}</td>
+              <td>{user.date}</td>
+              <td>
+                <button className="button0" onClick={() => handleEdit(user)}>
+                  <span>
+                    <img src="/edit.png" alt="cap" className="imag-load" />
+                  </span>
+                </button>
+                <button
+                  className="deleteButton1"
+                  onClick={() => handleDelete(user.id)}
+                >
+                  <span>
+                    <img src="/trash 1.png" alt="cap" className="image-load" />
+                  </span>
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       {/* Edit User Modal */}
       <Modal show={showEditModal} onClose={handleCloseEditModal}>
         {selectedUser && (

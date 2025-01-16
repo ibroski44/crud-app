@@ -11,7 +11,7 @@ const userSchema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
   number: z
     .string()
-    .regex(/^\d{10}$/, { message: "Phone Number must be 10 digits." }),
+    .regex(/^\d{11}$/, { message: "Phone Number must be 11 digits." }),
   E_number: z.string().min(1, { message: "Enroll Number is required." }),
   date: z
     .string()
