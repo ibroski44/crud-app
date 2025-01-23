@@ -199,10 +199,12 @@ code {
   background-color: #f1f3f5;
 }
 .imag-load {
-  width: 20px;
+  width: 27px;
 }
 .deleteButton1 {
   margin-left: 10px;
+  border: 0;
+  background-color: none;
 }
 /* src/components/Modal.css */
 .modal-overlay {
@@ -395,11 +397,19 @@ code {
 }
 /* EditUsers.css */
 
-.edit-user-container,
+.edit-user-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-right: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
 .Ib-form {
   max-width: 500px;
   margin: 0 auto;
-  padding: 20px;
+  padding-right: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -412,18 +422,30 @@ code {
   margin-bottom: 20px;
 }
 
-.edit-user-form,
+.edit-user-form {
+  display: flex;
+  flex-direction: column;
+}
 .user-form {
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
+  margin-bottom: 18px;
 }
 
 .form-group,
 .form-label {
   margin-bottom: 15px;
+  padding-right: 20px;
+}
+.form-group1,
+.form-label {
+  margin-bottom: 15px;
+  padding-right: 20px;
 }
 
 .form-group label,
+.form-group1 label,
 .form-label label {
   display: block;
   font-size: 16px;
@@ -432,6 +454,7 @@ code {
 }
 
 .form-group input,
+.form-group1 input,
 .form-label input {
   width: 100%;
   padding: 10px;
@@ -468,6 +491,7 @@ code {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 5px;
+  margin-bottom: 15px;
 }
 .cancel-button:hover {
   background-color: #45a049;

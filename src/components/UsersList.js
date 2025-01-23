@@ -83,9 +83,12 @@ export const UsersList = () => {
               <td>{user.E_number}</td>
               <td>{user.date}</td>
               <td>
-                <button className="button0" onClick={() => handleEdit(user)}>
+                <button
+                  className="deleteButton1"
+                  onClick={() => handleEdit(user)}
+                >
                   <span>
-                    <img src="/edit.png" alt="cap" className="imag-load" />
+                    <img src="/edit.png" alt="cap" className="image-load" />
                   </span>
                 </button>
                 <button

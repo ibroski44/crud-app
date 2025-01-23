@@ -35,7 +35,7 @@ export default function App() {
             <Route exact path="/users" element={<UsersList />} />
             <Route path="/users/:userId" element={<UserDetails />} />
             <Route path="/add-user" element={<UserForm />} />
-            <Route path="/edit-user/:id" element={<EditUsers />} />
+            {/* <Route path="/edit-user/:id" element={<EditUsers />} /> */}
             <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </div>
