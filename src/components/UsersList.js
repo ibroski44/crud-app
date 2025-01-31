@@ -66,11 +66,19 @@ export const UsersList = () => {
           </tr>
         </thead>
         <tbody>
-          {data?.data.map((user) => (
+          {[...data?.data].reverse().map((user) => (
             <tr key={user.id}>
               <td>
                 <span>
-                  <img src="/w.png" alt="cap" className="imag-load" />
+                  {user.photo ? (
+                    <img src={user.photo} alt="User" className="imag-load" />
+                  ) : (
+                    <img
+                      src="/default-avatar.png"
+                      alt="Default"
+                      className="imag-load"
+                    />
+                  )}
                 </span>
               </td>
               <td>
@@ -88,11 +96,21 @@ export const UsersList = () => {
                   onClick={() => handleEdit(user)}
                 >
                   <span>
-                    <img src="/edit.png" alt="cap" className="image-load" />
+                    <img
+                      src="/edit.png"
+                      alt="cap"
+                      className="image-load"
+                      style={{
+                        backgroundColor: "rgba(255, 255, 255, 1)",
+                      }}
+                    />
                   </span>
                 </button>
                 <button
                   className="deleteButton1"
+                  style={{
+                    backgroundColor: "rgba(255, 255, 255, 1)",
+                  }}
                   onClick={() => handleDelete(user.id)}
                 >
                   <span>
