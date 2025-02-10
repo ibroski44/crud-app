@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMutation, useQueryClient } from "react-query";
 import axios from "axios";
 
 export const EditUsers = ({ user, onClose }) => {
@@ -8,22 +9,29 @@ export const EditUsers = ({ user, onClose }) => {
   const [E_number, setE_number] = useState(user.E_number);
   const [date, setDate] = useState(user.date);
 
+  const queryClient = useQueryClient();
+
+  const updateUserMutation = useMutation(
+    (updatedUser) =>
+      axios.put(`http://localhost:4000/users/${user.id}`, updatedUser),
+    {
+      onSuccess: () => {
+        // Invalidate and refetch the users list to reflect the changes
+        queryClient.invalidateQueries("users");
+        onClose();
+      },
+    }
+  );
+
   const handleUpdate = (e) => {
     e.preventDefault();
-    axios
-      .put(`http://localhost:4000/users/${user.id}`, {
-        name,
-        email,
-        number,
-        E_number,
-        date,
-      })
-      .then(() => {
-        onClose();
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    updateUserMutation.mutate({
+      name,
+      email,
+      number,
+      E_number,
+      date,
+    });
   };
 
   return (
@@ -61,8 +69,12 @@ export const EditUsers = ({ user, onClose }) => {
           onChange={(e) => setDate(e.target.value)}
         />
       </div>
-      <button type="submit" className="submit-button">
-        Update
+      <button
+        type="submit"
+        className="submit-button"
+        disabled={updateUserMutation.isLoading}
+      >
+        {updateUserMutation.isLoading ? "Updating..." : "Update"}
       </button>
       <button type="button" onClick={onClose} className="cancel-button">
         Cancel
